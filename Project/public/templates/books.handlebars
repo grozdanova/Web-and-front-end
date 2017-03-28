@@ -1,0 +1,46 @@
+<section id="primary-content">
+    <div class="wrapper">
+        <h1 class="above"> Portfolio Category</h1>
+        <div id="medium">
+            {{#each this}} 
+            {{#each this}}
+            {{#each this}}
+            <section id="medium-content">
+                <h1>{{title}} - {{author}}</h1>
+                <img src="../images/border.png">
+                <address>Posted by {{postedBy}} on
+                    <time>{{date}}</time> in Some Category | 30 Comments</address>
+                <div id="p-1"  >
+                    <img id="box" src="{{image}}">
+                    <p>{{description}} = {{id}} </p>
+                     
+                    <a href="#/books/{{id}}" onclick="check(this)" id="{{id}}"><button class="btn">Read More</button></a>
+                </div >
+            </section>
+            {{/each}}
+            {{/each}}
+            {{/each}}
+                            <img class="last-border" src="../images/border-right.png">
+            <aside>
+                <div>
+                    <h2>Recent Posts</h2>
+                    <div id="a-1">
+                        <p>Rhoncus quis, varius sed velit. Mauris quis nunc eu nunc molestie egestas et sit amet odio. Morbi
+                            lacinia velit in nibh sodales sed pharetra sem feugiat. Vivamus ut cursus augue. Integer sit
+                            amet arcu lorem, at egestas tellus. Phasellus tellus orci, congue at tristique at, mattis ut
+                            arcu.</p>
+                    </div>
+                </div>
+                <div>
+                    <h2 id="second-h2">Recent Posts</h2>
+                    <div id="a-2">
+                        <p>Rhoncus quis, varius sed velit. Mauris quis nunc eu nunc molestie egestas et sit amet odio. Morbi
+                            lacinia velit in nibh sodales sed pharetra sem feugiat. Vivamus ut cursus augue. Integer sit
+                            amet arcu lorem, at egestas tellus. Phasellus tellus orci, congue at tristique at, mattis ut
+                            arcu.</p>
+                    </div>
+                </div>
+            </aside>
+        </div> {{!--end medium--}}
+    </div>
+</section>

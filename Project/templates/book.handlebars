@@ -1,0 +1,92 @@
+<section id="primary-content">
+    <div class="wrapper">
+        {{#each this}}
+        <h1 class="above">{{title}} </h1>
+        <div id="medium">
+            <section id="medium-content">
+                <h3>{{author}}</h3>
+                <img src="../images/border.png">
+                <address>Posted by {{postedBy}} on
+                    <time>{{date}}</time> in Some Category | 30 Comments</address>
+                <div id="p-1">
+                    <img id="box" src="{{image}}">
+                    <p>{{description}}</p>
+                </div>
+            </section>
+            <section id="medium-content">
+                <div class="comments">
+                    {{#if posts}} 
+                    {{#each posts}}
+                    <h1>Comments</h1>
+                    <img src="../images/border.png">
+
+                    <div id="comment">
+                        {{#if photoUrl}}
+                        <img src="{{photoUrl}}" alt="userPhoto" class="user-photo"> {{else}}
+                        <img src="../images/Profile_avatar_placeholder.png" alt="userPhoto" class="user-photo"> {{/if}}
+                        <div class="comment-box">
+                            <h2>{{postedBy}} says: </h2>
+                            <p class="comment-p">{{message}}</p>
+                            <a href="#/books/{{id}}/posts/add"><button class="btn">Comment</button></a>
+
+                        </div>
+                        <time>{{date}}</time>
+
+                        <div id="sub-comment"> {{!--Start sub-comment--}}
+                            <img src="../images/0833393_b.jpg" class="user-photo sub-user-photo">
+                            <div class="comment-box sub-somment-box">
+                                <h2>Nik Roach says: </h2>
+                                <p class="comment-p sub-comment-p">Rhoncus quis, varius sed velit. Mauris quis nunc eu nunc molestie egestas et sit amet odio.
+                                    Morbi lacinia velit in nibh sodales sed pharetra sem feugiat. Vivamus ut cursus augue.
+                                    Integer sit amet arcu lorem, at egestas tellus. Phasellus tellus orci, congue at tristique
+                                    at, mattis ut arcu. Vivamus bibendum dolor eget lacus hendrerit et egestas risus tincidunt.
+                                    Vivamus convallis magna sit amet orci vehicula suscipit. Quisque rhoncus lorem in ligula
+                                    condimentum sollicitudin at a massa. Donec mattis, libero at euismod semper, magnaest
+                                </p>
+                                <a href="#/books/{{id}}/posts/add"><button class="btn">Comment</button></a>
+                            </div>
+                            <time>11.03.2017</time>
+                        </div> {{!--End sub-comment--}}
+
+                    </div> {{!--End comment--}} 
+                        {{/each}}
+                         {{/if}}
+                </div> {{!--End comments--}}
+                <a href="#/books/{{id}}/posts/add" class="commentLink"><h1>Leave a Comment</h1></a>
+                <img src="../images/border.png">
+            </section>
+            <aside>
+                <div>
+                    <h2>Recent Posts</h2>
+                    <div id="a-1">
+                        <p>Rhoncus quis, varius sed velit. Mauris quis nunc eu nunc molestie egestas et sit amet odio. Morbi
+                            lacinia velit in nibh sodales sed pharetra sem feugiat. Vivamus ut cursus augue. Integer sit
+                            amet arcu lorem, at egestas tellus. Phasellus tellus orci, congue at tristique at, mattis ut
+                            arcu.
+                        </p>
+                    </div>
+                </div>
+                <div>
+                    <h2 id="second-h2">Recent Posts</h2>
+                    <div id="a-2">
+                        <p>Rhoncus quis, varius sed velit. Mauris quis nunc eu nunc molestie egestas et sit amet odio. Morbi
+                            lacinia velit in nibh sodales sed pharetra sem feugiat. Vivamus ut cursus augue. Integer sit
+                            amet arcu lorem, at egestas tellus. Phasellus tellus orci, congue at tristique at, mattis ut
+                            arcu.
+                        </p>
+                    </div>
+                </div>
+                <div>
+                    <h2 id="second-h2">Recent Comments</h2>
+                    <div id="a-2">
+                        <p>Rhoncus quis, varius sed velit. Mauris quis nunc eu nunc molestie egestas et sit amet odio. Morbi
+                            lacinia velit in nibh sodales sed pharetra sem feugiat. Vivamus ut cursus augue. Integer sit
+                            amet arcu lorem, at egestas tellus. Phasellus tellus orci, congue at tristique at, mattis ut
+                            arcu.
+                        </p>
+                    </div>
+                </div>
+            </aside>
+        </div> {{!--end medium--}} {{/each}}
+    </div>
+</section>

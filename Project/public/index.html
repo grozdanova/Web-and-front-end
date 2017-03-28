@@ -1,0 +1,121 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <title>Envisioned</title>
+  <!--[if lt IE 9]>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" type="text/css" href="css/main.css">
+  <link rel="stylesheet" type="text/css" href="css/books.css">
+  <link rel="stylesheet" type="text/css" href="css/book.css">
+  <link rel="stylesheet" type="text/css" href="css/book-add.css">
+  <link rel="stylesheet" type="text/css" href="css/login.css">
+  <link rel="stylesheet" type="text/css" href="./node_modules/toastr/build/toastr.css">
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"></script>
+
+  <script src="node_modules/jquery/dist/jquery.js"></script>
+  <script src="node_modules/sammy/lib/sammy.js"></script>
+  <script src="node_modules/handlebars/dist/handlebars.js"></script>
+  <script src="node_modules/toastr/build/toastr.min.js"></script>
+
+  <script src="https://www.gstatic.com/firebasejs/3.6.10/firebase.js"></script>
+
+</head>
+
+<body>
+
+
+
+  <header>
+    <div class="wrapper">
+      <div id="logo"><img src="images/envisioned-logo.png" alt="logo" /> </div>
+      <nav>
+        <ul id="nav">
+          <li><a href="#/home">Home</a></li>
+          <li><a href="#/profile">Profile</a></li>
+          <li><a href="#/about">About</a></li>
+          <li><a href="#/books">Books</a></li>
+          <li><a href="#/books/add">Add Book</a></li>
+          <li><a href="#/login" id="link-login">Login</a></li>
+          <li><a href="#/logout" id="link-logout" >Log out</a></li>
+          <li class="social">
+            <a href="#" class="social-link"><img src="images/twitter.png" alt="Twitter-icon"></a>
+          </li>
+          <li class="social">
+            <a href="#" class="social-link"><img src="images/RSS.png" alt="RSS-icon"></a>
+          </li>
+          <li class="social">
+            <a href="#" class="social-link"><img src="images/facebook.png" alt="facebook-icon"></a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <div id="content"></div>
+  <footer>
+    <div class="wrapper">
+      <ul id="footer-content">
+        <li class="foo-1">
+          <h2>Who We Are</h2>
+          <p>Rhoncus quis, varius sed velit. Mauris quis nunc eu nunc molestie egestas et sit amet odio. Morbi lacinia velit
+            in nibh sodales sed pharetra sem feugiat. Vivamus ut cursus augue. Integer sit amet arcu lorem, at egestas tellus.
+            Phasellus tellus orci, congue at tristique at, mattis ut arcu. Donec dictum eros eu felis laoreet egestas. Donec
+            dictum eros eu felis laoreet egestas.</p>
+        </li>
+        <li class="foo-2">
+          <h2>Custom Text Widget</h2>
+          <ul id="nested">
+            <li>Rhoncus quis varius sed velit nibh moles</li>
+            <li>Mauris quis nunc eu nunc molestie</li>
+            <li>Egestas et sit amet odio morbi quis nunc </li>
+            <li>Lacinia velit in nibh sodales sed quis nunc </li>
+            <li>Pharetra sem feugiat nibh sodales sed </li>
+            <li>Vivamus ut cursus augue nibh sodales sed </li>
+          </ul>
+        </li>
+        <li class="last">
+          <h2>Recent Posts</h2>
+          <p>Rhoncus quis, varius sed velit. Mauris quis nunc eu nunc molestie egestas et sit amet odio. Morbi lacinia velit
+            in nibh sodales sed pharetra sem feugiat. Vivamus ut cursus augue. Integer sit amet arcu lorem, at egestas tellus.
+            Phasellus tellus orci, congue at tristique at, mattis ut arcu. Donec dictum eros eu felis laoreet egestas. Donec
+            dictum eros eu felis laoreet egestas.</p>
+        </li>
+      </ul>
+    </div>
+    <nav id="nav-footer">
+      <div class="wrapper">
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Profile</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Themes</a></li>
+          <li><a href="#">Features</a></li>
+          <li><a href="#">Blog</a></li>
+        </ul>
+        <small>Designed by <p>Elegant WordPress Themes</p> | Powered by <p>WordPress</p>
+      </small>
+      </div>
+    </nav>
+  </footer>
+
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.1.7/vue.js"></script>
+  <script type="text/javascript" src="https://rawgit.com/Wlada/vue-carousel-3d/master/dist/vue-carousel-3d.min.js"></script>
+
+  <script type="text/javascript" src="js/controllers/homeController.js"></script>
+  <script type="text/javascript" src="js/controllers/aboutController.js"></script>
+  <script type="text/javascript" src="js/controllers/booksController.js"></script>
+  <script type="text/javascript" src="js/controllers/usersController.js"></script>
+
+  <script type="text/javascript" src="js/templates.js"></script>
+  <script type="text/javascript" src="js/sammyApp.js"></script>
+  <script type="text/javascript" src="js/data.js"></script>
+
+</body>
+
+</html>

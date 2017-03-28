@@ -1,0 +1,1 @@
+"use strict";var templates=function(e){function t(e){return new Promise(function(t,n){var r="templates/"+e+".handlebars";$.get(r,function(e){var n=Handlebars.compile(e);t(n)})})}return{get:t}}();
