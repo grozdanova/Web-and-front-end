@@ -21,7 +21,10 @@ html, body  {
 .wrapper {
     margin: 0 auto;
 	padding: 0;
-    width: 960px;
+    /*width: 960px;*/
+
+    max-width: 960px;
+    width: 100%;
     /*border: 1px solid yellow;*/
 }
 h2 {
@@ -269,6 +272,29 @@ small {
 small > p {
     color: white;
      display: inline;
+}
+/*About page*/
+.about-img {
+    width: 100%;
+    margin-top: 10%;
+}
+.heading-img {
+    margin-top: -10%;
+    margin-bottom: 10%;
+    color: white;
+    text-align: center;
+    font-size: 2rem;
+}
+.about-block p{
+ font-size: 1.2rem;
+ font-family: 'colaborate-thinregular';
+}
+.about-main {
+    display: block;
+}
+.message {
+    font-size: 1.5rem;
+    text-align: center;
 }
 /*Responsive design*/
 @media (max-width: 960px) {

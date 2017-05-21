@@ -1,15 +1,1 @@
-var templates = (function (params) {
-    function get(name) {
-        var promise = new Promise(function (resolve, reject) {
-            var url = 'templates/' + name + '.handlebars';
-            $.get(url, function (html) {
-                var template = Handlebars.compile(html);
-                resolve(template);
-            });
-        });
-        return promise;
-    }
-    return {
-        get: get
-    };
-}());
+"use strict";var templates=function(e){function t(e){return new Promise(function(t,n){var r="templates/"+e+".handlebars";$.get(r,function(e){var n=Handlebars.compile(e);t(n)})})}return{get:t}}();

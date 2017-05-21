@@ -1,12 +1,12 @@
 var aboutController = function () {
-    function all(context) {
+  function all(context) {
     templates.get('about')
-      .then(function(template) {
-        context.$element().html(template());
+      .then(function (template) {
+          context.$element().html(template());
       });
-    }
+  }
 
-    return {
-        all: all
-    };
-}();
+  return {
+    all: all
+  };
+} ();

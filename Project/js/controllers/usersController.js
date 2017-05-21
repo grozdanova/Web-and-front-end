@@ -1,7 +1,7 @@
-var usersController = function () {
+var usersController = function() {
     function login(context) {
         templates.get('login')
-            .then(function (template) {
+            .then(function(template) {
                 context.$element().html(template());
 
                 // Get Elemnets
@@ -22,30 +22,25 @@ var usersController = function () {
                     promise.then(e => toastr.success('User logged in!'));
                     promise.catch(e => toastr.error(e.message));
                 });
-
-
-                firebase.auth().onAuthStateChanged(firebaseUser => {
-                    if (firebaseUser) {
-                        // console.log(firebaseUser);
-                        // console.log(firebaseUser.email);
-
-                        console.log('logged in');
-                        context.redirect('#/');
-                        $('#btnLogin').hide();
-                        $('#link-login').hide();
-                        $('#link-logout').show();
-                    } else {
-                        $('#btnLogout').hide();
-                        $('#link-logout').hide();
-                        console.log('not logged in');
-                    }
+                    firebase.auth().onAuthStateChanged(firebaseUser => {
+                        if (firebaseUser) {
+                            console.log('logged in');
+                            context.redirect('#/');
+                            $('#btnLogin').hide();
+                            $('#link-login').hide();
+                            $('#link-logout').show();
+                        } else {
+                            $('#btnLogout').hide();
+                            $('#link-logout').hide();
+                            console.log('not logged in');
+                        }
+                    });
                 });
-            });
     }
 
     function register(context) {
         templates.get('signup')
-            .then(function (template) {
+            .then(function(template) {
                 context.$element().html(template());
 
                 const txtEmail = document.getElementById('txtEmail');
@@ -61,8 +56,6 @@ var usersController = function () {
                     var username = txtUsername.value;
                     var auth = firebase.auth();
 
-
-
                     const promise = auth.createUserWithEmailAndPassword(email, pass);
 
                     promise.catch(e => console.log(e.message));
@@ -77,10 +70,6 @@ var usersController = function () {
                                 username: username,
                                 email: email
                             });
-
-
-                        } else {
-                            // not signed in
                         }
                     });
 
@@ -103,25 +92,20 @@ var usersController = function () {
     }
     function currentUser(context) {
         templates.get('profile')
-            .then(function (template) {
-
+            .then(function(template) {
                 var user = firebase.auth().currentUser;
                 var uid, userData;
-
                 if (user != null) {
                     uid = user.uid;
                     var userRef = firebase.database().ref('users').child(uid);
-                    userRef.on('value', function (snapshot) {
+                    userRef.on('value', function(snapshot) {
                         userData = snapshot.val();
-                        console.log(userData);
-                        console.log(userData.username);
                         context.$element().html(template(userData));
                     });
-                }else{
+                } else {
                     toastr.info('You have to logged in!');
                     context.redirect('#/login');
                 }
-
             });
     }
 

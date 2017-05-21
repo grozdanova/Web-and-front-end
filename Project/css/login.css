@@ -1,17 +1,22 @@
-.loginForm {
+.loginForm, .bookAddForm {
     background: url('../images/content-box.png');
 }
 form, .form {
     border: 3px solid #f1f1f1;   
 }
 
-input[type=text], input[type=password] {
+input[type=text], input[type=password], textarea {
     width: 100%;
     padding: 12px 20px;
     margin: 8px 0;
     display: inline-block;
     border: 1px solid #ccc;
     box-sizing: border-box;
+}
+textarea {
+    height: 300px;
+    resize: none;
+    font-size: 16px;
 }
 input[type=file] {
         width: 100%;
@@ -52,6 +57,8 @@ span.psw {
     float: right;
     padding-top: 16px;
 }
+/*Book add*/
+
 
 
 /* Change styles for span and cancel button on extra small screens */
@@ -60,4 +67,31 @@ span.psw {
        display: block;
        float: none;
     }
+}
+/*Profile comments table*/
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+tr:hover,tr:hover td {
+    background-color: #37414A;
+    color: white;
+}
+table a {
+    text-decoration: none;
+    color: black;
+}
+table a:hover {
+    text-decoration: underline;
 }

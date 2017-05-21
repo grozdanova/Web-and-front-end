@@ -1,29 +1,48 @@
 <section id="primary-content">
-        <h1 class="above"> Profile Page</h1>
-        <div id="medium">
-            <div class="form">
-                <div class="imgcontainer">
-                    {{#if photoUrl}}
-                    <img src="{{photoUrl}}" alt="userPhoto" class="avatar">
-                    {{else}}
-                    <img src="../images/Profile_avatar_placeholder.png" alt="userPhoto" class="avatar">
-                    {{/if}}
-                    <p><b>Username:</b> {{username}}</p>
-                    <p><b>E-mail:</b> {{email}}</p>
-                </div>
-                <br>
-                <h2>My Books: </h2>
-                <ol>
-                    {{#each books}}
-                    <li><b> {{title}}</b> - {{author}} </li>
-                    {{/each}}
-                </ol>
-                {{#if posts}}
-                {{#each posts}}
-                <h2>My Comments: </h2>
-                <ul><li>{{message}}</li></ul>
-                {{/each}}
-                {{/if}}
+    <div class="wrapper">
+    <h1 class="above"> Profile Page</h1>
+    <div id="medium">
+        <div class="form">
+            <div class="imgcontainer">
+                {{#if photoUrl}}
+                <img src="{{photoUrl}}" alt="userPhoto" class="avatar"> {{else}}
+                <img src="../images/Profile_avatar_placeholder.png" alt="userPhoto" class="avatar"> {{/if}}
+                <p><b>Username:</b> {{username}}</p>
+                <p><b>E-mail:</b> {{email}}</p>
             </div>
+            <br>
+            {{#if books}} 
+            <h2>My Books: </h2>
+            <ol>
+                {{#each books}}
+                <li><b> {{title}}</b> - {{author}} </li>
+                {{/each}}
+            </ol>
+            {{else}}
+            <h2>You stil don`t have any books!</h2><br>
+            {{/if}}
+            {{#if posts}} 
+            <h2>My Comments: </h2>
+            <br>
+            <table>
+                <tr>
+                    <th>Comment book</th>
+                    <th>Post content</th>
+                    <th>Published</th>
+                </tr>
+                {{#each posts}}
+                <tr>
+                    
+                    <td><a href="#/books/id/{{bookId}}" id="{{bookId}}">{{bookTitle}} - {{bookAuthor}}</a></td>
+                    <td>{{message}}</td>
+                    <td>{{date}}</td>
+                </tr>
+                {{/each}}
+            </table>
+             {{else}}
+             <h2>You stil don`t have any comments!</h2>
+             {{/if}}
         </div>
+    </div>
+    </div>
 </section>

@@ -1,26 +1,16 @@
  <div id="image-slider" >
-
-    <!--<ul>
-      <li><img src="images/0833393_b.jpg" alt="book-image" title="Title goes here" class="slide" /></li>
-      <li><img src="images/113284z.jpg" alt="book-image" title="Title goes here" class="slide"/></li>
-      <li><img src="images/1031261.jpg" alt="book-image" title="Title goes here" class="slide"/></li>
-      <li><img src="images/8132243_b.jpg" alt="book-image" title="Title goes here" class="slide"/></li>
-      <li><img src="images/book 348.jpg" alt="book-image" title="Title goes here" class="slide" /></li>
-    </ul>-->
-
    <carousel-3d :controls-visible="true" :clickable="false">
       <slide v-for="(slide, i) in slides" :index="i">
         <figure>
           <img src="http://lorempixel.com/500/335/">
           <figcaption>
-            The sky is the limit only for those who aren't afraid to fly! The sky is the limit only for those who aren't afraid to fly!
+        The sky is the limit only for those who aren't afraid to fly! The sky is the limit only for those who aren't afraid to fly!
           </figcaption>
         </figure>
       </slide>
     </carousel-3d>
     <div id="controls"></div>
   </div>
-  
   <!--Primary content-->
   <div id="features">
     <div class="wrapper">

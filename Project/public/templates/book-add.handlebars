@@ -1,20 +1,24 @@
-<section class="bookAddForm">
-<div class="wrapper">
-<h2>Add book</h2>
-<form action="#/books/">
+<section class="bookAddForm" id="primary-content">
+    <div class="wrapper">
+        <h1 class="above">Add book</h1>
+        <div id="medium">
+            <form action="#/books/">
+                <div class="container">
+                    <label><b>Author</b></label>
+                    <input id="author" type="text" placeholder="Enter Author" required>
 
-   <label><b>Author</b></label>
-    <input id="author" type="text" placeholder="Enter Author" required>
+                    <label><b>Title</b></label>
+                    <input id="title" type="text" placeholder="Enter Title" required>
 
-    <label><b>Title</b></label>
-    <input id="title" type="text" placeholder="Enter Title" required>
+                    <label><b>Image URL</b></label>
+                    <input id="imgUrl" type="text" placeholder="Enter URL" required>
 
-       <label><b>Description</b></label>
-    <input id="desc" type="text" placeholder="Enter Description" >
-        
-    <button id="btnAdd" type="submit">Add</button>
+                    <label><b>Description</b></label>
+                    <textarea id="desc" type="text" placeholder="Enter Description" required></textarea>
 
-
-</form>
-</div>
+                    <button id="btnAdd" type="submit">Add</button>
+                </div>
+            </form>
+        </div>
+    </div>
 </section>

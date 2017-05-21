@@ -4,7 +4,22 @@
         <h1 class="above">{{title}} </h1>
         <div id="medium">
             <section id="medium-content">
-                <h3>{{author}}</h3>
+                <h3>{{author}} </h3>
+                <div class="tooltip">
+                    <select id="example{{id}}" class="example" review-id="{{id}}" data-rating="{{rating}}">
+                    <option value=""></option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                </select>
+                    <span class="tooltiptext">Select and rate</span>
+                </div>
+                <span id="rate"> | Rate it</span> {{#if userVote}}
+                <span class="your-rating">
+                  Rating: {{rating}} | Your rating: {{userVote}}
+                </span>{{/if}}
                 <img src="../images/border.png">
                 <address>Posted by {{postedBy}} on
                     <time>{{date}}</time> in Some Category | 30 Comments</address>
@@ -15,8 +30,7 @@
             </section>
             <section id="medium-content">
                 <div class="comments">
-                    {{#if posts}} 
-                    {{#each posts}}
+                    {{#if posts}} {{#each posts}}
                     <h1>Comments</h1>
                     <img src="../images/border.png">
 
@@ -27,11 +41,11 @@
                         <div class="comment-box">
                             <h2>{{postedBy}} says: </h2>
                             <p class="comment-p">{{message}}</p>
-                            <a href="#/books/{{id}}/posts/add"><button class="btn">Comment</button></a>
+                            <a href="#/books/id/{{bookId}}/posts/add"><button class="btn">Comment</button></a>
 
                         </div>
                         <time>{{date}}</time>
-
+                        {{#if sub-comment}}
                         <div id="sub-comment"> {{!--Start sub-comment--}}
                             <img src="../images/0833393_b.jpg" class="user-photo sub-user-photo">
                             <div class="comment-box sub-somment-box">
@@ -43,16 +57,16 @@
                                     Vivamus convallis magna sit amet orci vehicula suscipit. Quisque rhoncus lorem in ligula
                                     condimentum sollicitudin at a massa. Donec mattis, libero at euismod semper, magnaest
                                 </p>
-                                <a href="#/books/{{id}}/posts/add"><button class="btn">Comment</button></a>
+                                <a href="#/books/id/{{bookId}}/posts/add"><button class="btn">Comment</button></a>
                             </div>
                             <time>11.03.2017</time>
                         </div> {{!--End sub-comment--}}
-
-                    </div> {{!--End comment--}} 
-                        {{/each}}
                          {{/if}}
+                    </div> {{!--End comment--}} {{/each}} {{/if}}
                 </div> {{!--End comments--}}
-                <a href="#/books/{{id}}/posts/add" class="commentLink"><h1>Leave a Comment</h1></a>
+                <a href="#/books/id/{{id}}/posts/add" class="commentLink">
+                    <h1>Leave a Comment</h1>
+                </a>
                 <img src="../images/border.png">
             </section>
             <aside>
