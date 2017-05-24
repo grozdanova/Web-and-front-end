@@ -30,10 +30,10 @@
             </section>
             <section id="medium-content">
                 <div class="comments">
-                    {{#if posts}} {{#each posts}}
+                    {{#if posts}} 
                     <h1>Comments</h1>
                     <img src="../images/border.png">
-
+                    {{#each posts}}
                     <div id="comment">
                         {{#if photoUrl}}
                         <img src="{{photoUrl}}" alt="userPhoto" class="user-photo"> {{else}}
