@@ -1,0 +1,128 @@
+html,
+body {
+    height: 100%;
+}
+#layout {
+    height: 100%;
+    overflow: hidden;
+}
+#layout > .row:first-child {
+    height: 100%;
+}
+
+.img-col {
+    padding-left: 0;
+    padding-right: 0;
+    width: 50px;
+    flex-basis: 50px;
+}
+.date-col {
+    padding-left: 0;
+    padding-right: 0;
+    width: 50px;
+    flex-basis: 50px;
+}
+.content-col {
+}
+
+.thumb {
+    display: inline-block;
+    max-width: 50px;
+    max-height: 50px;
+    box-sizing: border-box;
+    border-radius: 100%;
+    overflow: hidden;
+}
+.thumb > img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+#mail-list {
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+#mail-list .row {
+    align-items: flex-start;
+    flex-wrap: nowrap;
+}
+#mail-list .from {
+    white-space: nowrap;
+    max-width: 200px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+#mail-list .subject {
+    max-width: 200px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+#mail-list .content {
+    margin-top: 5px;
+    height: calc( 2 * 1.5em );
+    overflow: hidden;
+}
+
+.from {
+    font-size: .9em;
+}
+.subject {
+    font-size: 1.1em;
+}
+.content {
+    margin-top: 5px;
+}
+
+#folder-list {
+    display: none;
+    position: fixed;
+    flex: none;
+    top: 0;
+    bottom: 0;
+    width: 300px;
+    background: #fff;
+    z-index: 1060;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+.modal-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 1050;
+    background: rgba(0,0,0, .3);
+    display: none;
+}
+.modal-bg.shown,
+#folder-list.shown {
+    display: block;
+}
+
+#mail-view {
+    display: none;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+@media (min-width: 1000px) {
+    #mail-list {
+        width: 360px;
+        flex: none;
+        background: #f0f0f0;
+        border-right: 1px solid #ccc;
+    }
+
+    #mail-view {
+        display: block;
+    }
+}
+
+@media (min-width: 1300px) {
+    #folder-list {
+        display: block;
+        position: relative;
+    }
+}
